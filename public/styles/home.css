@@ -1,0 +1,114 @@
+html {
+    background-color: #0a0000;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+}
+
+/* body {
+    text-align: center;
+} */
+
+@media (max-width: 575.98px) {
+    h1 {
+        color:rgb(255, 255, 255);
+        text-align: center;
+    }
+    
+    #title {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #content {
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #post {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #post-list-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .list-item {
+        text-align: left;
+    }
+}
+
+
+
+@media (min-width: 576px) {
+    h1 {
+        color:rgb(255, 255, 255);
+        margin-left: 40%;
+        font-size: 4rem;
+    }
+    
+    #create-area {
+        margin-left: 40%;
+    }
+
+    /* #title {
+        text-align: center;
+    } */
+    
+    #content {
+        margin-top: 10px;
+        vertical-align: bottom;
+        box-sizing: border-box;
+    }
+    
+    #post-list-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .list-item {
+        text-align: left;
+        margin-left: 40%;
+    }
+}
+
+#title {
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+#content {
+    font-size: 20px;
+    border-radius: 7px;
+}
+#post {
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+.list-item {
+    font-size: 2rem;
+    color: antiquewhite;
+}
+
+
+a:visited {
+    color: #a5a1a1;
+}
+
+a:link {
+    color: antiquewhite;
+    
+}
+
+footer {
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    bottom: 0;
+}

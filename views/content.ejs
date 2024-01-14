@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= selectPost.title %></title>
+    <link rel="stylesheet" href="../public/styles/content.css">
+</head>
+<body>
+
+    <form action="/" method="get" class="home-button">
+        <button id="home" type="submit">&lt&lt&ltHome</button>
+    </form>
+
+    <div>
+        <h1><%= selectPost.title %></h1>
+        <p id="content"><%= selectPost.content %></p>
+    </div>
+    <div>
+
+        <form action="/delete/<%= selectIndex %>" method="post" class="button">
+            <button id="delete" type="submit">Delete</button>
+            <button id="edit" type="button" onclick="handler()">Edit</button>
+        </form>
+        
+        
+
+        <form action="/edit/<%= selectIndex %>" method="post">
+            <textarea id="inputArea" name="updatedContent"  hidden><%= selectPost.content %></textarea>
+            <input id="post" type="submit" value="post" hidden>
+        </form>
+
+    </div>
+
+    <script>
+        function handler() {
+            document.getElementById("content").setAttribute("hidden", true);
+            document.getElementById("delete").setAttribute("hidden", true);
+            document.getElementById("edit").setAttribute("hidden", true);
+            document.getElementById("inputArea").removeAttribute("hidden");
+            document.getElementById("post").removeAttribute("hidden");
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const contentArea = document.getElementById('inputArea');
+            contentArea.onclick = function (event) {
+                contentArea.setAttribute("rows", 35);
+                event.stopPropagation(); // Prevents event bubbling to prevent document's click event from being triggered immediately
+            };
+
+            document.onclick = function () {
+                contentArea.setAttribute("rows", 4); // Event triggered when clicking elsewhere in the document
+            };
+        });
+
+    </script>
+
+    <%- include('partials/footer.ejs'); %>
+</body>
+</html>

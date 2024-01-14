@@ -1,0 +1,124 @@
+html {
+    background-color: #0a0000;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+}
+
+/* body {
+    text-align: center;
+} */
+
+@media (max-width: 575.98px) {
+    h1 {
+        color:rgb(255, 255, 255);
+        text-align: center;
+    }
+    
+    #content {
+        text-align: left;
+        margin-top: 10px;
+        font-size: 20px;
+        color:rgb(255, 255, 255);
+    }
+
+    #delete {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #edit {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #inputArea {
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #post {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+
+@media (min-width: 576px) {
+    h1 {
+        color:rgb(255, 255, 255);
+        text-align: center;
+        font-size: 4rem;
+    }
+    
+
+    /* #title {
+        text-align: center;
+    } */
+    
+    #content {
+        margin-top: 10px;
+        margin-left: 30%;
+        color:rgb(255, 255, 255);
+        width: 40%;
+    }
+    
+    #inputArea {
+        margin-top: 10px;
+        margin-left: 30%;
+        width: 40%;
+        vertical-align: bottom;
+    }
+
+    .button {
+        display: flex;
+        width: 40%;
+        margin-left: 30%;
+        justify-content: space-between;
+    }
+}
+
+#title {
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+#content {
+    white-space: pre-line;
+    text-align: justify;
+}
+
+#inputArea, #content {
+    font-size: 20px;
+    border-radius: 7px;
+}
+#delete, #edit, #post, #home {
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+.list-item {
+    font-size: 2rem;
+    color: antiquewhite;
+}
+
+
+a:visited {
+    color: #a5a1a1;
+}
+
+a:link {
+    color: antiquewhite;
+    
+}
+
+footer {
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    bottom: 0;
+}
+
