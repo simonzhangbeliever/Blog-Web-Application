@@ -7,30 +7,32 @@
     <link rel="stylesheet" href="../public/styles/content.css">
 </head>
 <body>
-
-    <form action="/" method="get" class="home-button">
-        <button id="home" type="submit">&lt&lt&ltHome</button>
-    </form>
-
-    <div>
-        <h1><%= selectPost.title %></h1>
-        <p id="content"><%= selectPost.content %></p>
-    </div>
-    <div>
-
-        <form action="/delete/<%= selectIndex %>" method="post" class="button">
-            <button id="delete" type="submit">Delete</button>
-            <button id="edit" type="button" onclick="handler()">Edit</button>
-        </form>
-        
-        
-
-        <form action="/edit/<%= selectIndex %>" method="post">
-            <textarea id="inputArea" name="updatedContent"  hidden><%= selectPost.content %></textarea>
-            <input id="post" type="submit" value="post" hidden>
+    <div class="content-container">   
+        <form action="/" method="get" class="home-button">
+            <button id="home" type="submit">&lt&lt&ltHome</button>
         </form>
 
+        <div>
+            <h1><%= selectPost.title %></h1>
+            <p id="content"><%= selectPost.content %></p>
+        </div>
+        <div class="buttom-button">
+
+            <form action="/delete/<%= selectId %>" method="post" class="button">
+                <button id="delete" type="submit">Delete</button>
+                <button id="edit" type="button" onclick="handler()">Edit</button>
+            </form>
+            
+            
+
+            <form action="/edit/<%= selectId %>" method="post">
+                <textarea id="inputArea" name="updatedContent"  hidden><%= selectPost.content %></textarea>
+                <input id="post" type="submit" value="post" hidden>
+            </form>
+
+        </div>
     </div>
+
 
     <script>
         function handler() {

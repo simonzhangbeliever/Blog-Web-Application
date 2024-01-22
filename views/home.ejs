@@ -7,27 +7,28 @@
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
-    <div>
-        <h1>Your Blogs</h1>
-    </div>
-    <div>
-        <form action="/create" method="post" id="create-area">
-            <div><input type="text" name="title" id="title" placeholder="New title" required /></div>
-            <div>
-                <textarea name="content" id="content" placeholder="New content" rows="4" cols="40" required></textarea>
-                <input type="submit" value="post" id="post" />
-            </div>
-        </form>
-    </div>
+    <div class="content-container">
+        <div>
+            <h1>Your Blogs</h1>
+        </div>
+        <div>
+            <form action="/create" method="post" id="create-area">
+                <div><input type="text" name="title" id="title" placeholder="New title" required /></div>
+                <div>
+                    <textarea name="content" id="content" placeholder="New content" rows="4" cols="40" required></textarea>
+                    <input type="submit" value="post" id="post" />
+                </div>
+            </form>
+        </div>
 
-    <div id="post-list-container">
-        <!-- <ul id="post-list"> -->
-            <% listPosts.forEach((post, index) => { %>
-                    <div class="list-item"><li><a href="/content/<%= index %>"><%= post.title %></a></li></div>
-            <% }); %>
-        <!-- </ul> -->
+        <div id="post-list-container">
+            <!-- <ul id="post-list"> -->
+                <% listPost.forEach((post) => { %>
+                        <div class="list-item"><li><a href="/content/<%= post.id %>"><%= post.title %></a></li></div>
+                <% }); %>
+            <!-- </ul> -->
+        </div>
     </div>
-
 
     <script>
 
