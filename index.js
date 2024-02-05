@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from "express";
 import bodyParser from "body-parser";
 import { fileURLToPath } from 'url';
@@ -27,11 +28,11 @@ app.use('/public/styles', express.static(__dirname + '/public/styles', {
 
 //connect AWS postgres database
 const db = new pg.Client({
-    user: "postgres",
-    host: "my-first-db-instance.cn4ussua40q5.ap-southeast-2.rds.amazonaws.com",
-    database: "blog",
-    password: "Xu19940521",
-    port: 5432,
+    user: process.env.PG_USER,
+    host: process.env.PG_HOST,
+    database: process.env.PG_DATABASE,
+    password: process.env.PG_PASSWORD,
+    port: process.env.PG_PORT,
 });
 db.connect();
 
