@@ -100,7 +100,6 @@ body {
 #delete, #edit, #post, #home {
     font-size: 20px;
     border-radius: 7px;
-    background-color: white;
 }
 
 .list-item {
